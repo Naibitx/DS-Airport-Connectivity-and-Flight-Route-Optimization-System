@@ -8,9 +8,8 @@
 #include <vector>
 #include <string>
 
-struct Path {
-  std::vector<std::string> airport_codes
-}
+// Pseudocode 
+struct Path{}
 struct Connections {}
 struct MST_Edge {}
 
