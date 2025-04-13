@@ -9,23 +9,28 @@
 #include <string>
 
 // Pseudocode 
-struct Path{}
-struct Connections {}
-struct MST_Edge {}
+// struct Path{}
+// struct Connections {}
+// struct MST_Edge {}
 
 class airlineGraph {
 private:
-  struct adj Node
+  std::string origin_airp;
+  std::string destination;
+  std::string origin_city;
+  int distance;
+  int cost;
+  /*struct adj Node
     destination
     cost->dist
     Adj *Node next
     Adj Node(std::string destination, distance, int cost)
-  struct NodeList
+  struct NodeList*/
 public:
-  Graph()
-  ~Graph()
-  bool readcsv(airports.cvs)
-  path shortestpath()
+  airlineraph(); // constructor
+  ~airlineGraph(); // deconstructor
+  bool readCSV(const std::string& filename);
+  path shortestpath();
 };
 
 #endif //AIRLINEGRAPH_H
