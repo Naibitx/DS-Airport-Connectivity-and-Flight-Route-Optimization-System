@@ -4,11 +4,13 @@
 
 #ifndef AIRLINEGRAPH_H
 #define AIRLINEGRAPH_H
-
-// Function to load in CSV File
-void CSV(const std::string& filename);
+#include <string>
+#include <vector>
 
 class airlineGraph {
+public:
+  // Function to load in CSV File
+  void CSV(const std::string& filename);
 
 };
 
