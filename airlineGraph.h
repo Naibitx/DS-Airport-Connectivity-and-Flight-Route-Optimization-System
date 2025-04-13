@@ -30,7 +30,7 @@ public:
   airlineraph(); // constructor
   ~airlineGraph(); // deconstructor
   bool readCSV(const std::string& filename);
-  path shortestpath();
+  bool shortestpath(const std::string& origin_airp);
 };
 
 #endif //AIRLINEGRAPH_H
