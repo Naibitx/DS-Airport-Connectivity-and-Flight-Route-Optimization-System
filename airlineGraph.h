@@ -28,6 +28,9 @@ public:
   path shortestpath()
 };
 
-
-
 #endif //AIRLINEGRAPH_H
+
+//READ CSV
+//Create Graph
+//Shortest_path(Distance)
+//S_P(D, cost)
