@@ -6,8 +6,7 @@
 #define AIRLINEGRAPH_H
 
 #include <vector>
-#include "Airport.h"
-#include "FlightEdge.h"
+#include <string>
 
 class airlineGraph {
 public:
