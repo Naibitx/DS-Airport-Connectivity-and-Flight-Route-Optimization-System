@@ -4,7 +4,6 @@
 
 #ifndef AIRLINEGRAPH_H
 #define AIRLINEGRAPH_H
-#include <string>
 #include <vector>
 
 class airlineGraph {
