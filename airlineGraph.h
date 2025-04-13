@@ -8,11 +8,25 @@
 #include <vector>
 #include <string>
 
-class airlineGraph {
-public:
-  // Function to load in CSV File
-  void CSV(const std::string& filename);
+struct Path {
+  std::vector<std::string> airport_codes
+}
+struct Connections {}
+struct MST_Edge {}
 
+class airlineGraph {
+private:
+  struct adj Node
+    destination
+    cost->dist
+    Adj *Node next
+    Adj Node(std::string destination, distance, int cost)
+  struct NodeList
+public:
+  Graph()
+  ~Graph()
+  bool readcsv(airports.cvs)
+  path shortestpath()
 };
 
 
