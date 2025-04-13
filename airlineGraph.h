@@ -4,7 +4,10 @@
 
 #ifndef AIRLINEGRAPH_H
 #define AIRLINEGRAPH_H
+
 #include <vector>
+#include "Airport.h"
+#include "FlightEdge.h"
 
 class airlineGraph {
 public:
