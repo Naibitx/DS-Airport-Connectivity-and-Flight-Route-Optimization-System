@@ -1,6 +1,4 @@
-//
 // Created by maste on 4/13/2025.
-//
 
 #ifndef AIRLINEGRAPH_H
 #define AIRLINEGRAPH_H
@@ -9,16 +7,16 @@
 #include <vector>
 
 // adjency list for each flight connection
-struct adjNode{
+struct AdjNode{
     std::string destination;
     int distance, cost;
-    adjNode* next;
+    AdjNode* next;
     
-    adjNode(){
+    AdjNode(){
         next = nullptr;
     }
     
-    adjNode(const std::string& dest, int dist, int cost){
+    AdjNode(const std::string& dest, int dist, int cost){
         destination = dest;
         distance = dist;
         cost = cost;
@@ -70,7 +68,7 @@ struct Connections{
 struct GraphNode {
     std::string airport_code;
     std::string state_code;
-    adjNode* head; 
+    AdjNode* head; 
 
     GraphNode() {
         head = nullptr;
@@ -83,6 +81,11 @@ struct GraphNode {
     }
 };
 
+struct AdjList{
+    AdjNode* head;
+    AdjList(): head(nullptr){} // head of the list
+};
+
 //airline graph system
 class airlineGraph {
 private:
@@ -90,6 +93,17 @@ private:
     int getIndex(const std::string& airt_code);
     bool airportExists(const std::string& air_code);
     std::vector<mstEdge> undirectedEdges; 
+
+    struct DisjointSet {
+        int* parent;
+        int* rank;
+        int n;
+        DisjointSet(int size);
+        ~DisjointSet();  
+        int find(int v);
+        void unionSet(int u, int v);        
+    
+    };
 
 public:
     airlineGraph(); 
