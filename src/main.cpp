@@ -28,8 +28,8 @@ void printMST(const vector<mstEdge>& mst, int totalCost) {
 int main() {
     airlineGraph graph;
     
-    // Read CSV file (adjust path as needed)
-    graph.readCSV("flights.csv");
+    // Read CSV file
+    graph.readCSV("airports.csv");
     
     // Task 2: Shortest path between two airports
     cout << "\nTask 2: Shortest path example\n";
