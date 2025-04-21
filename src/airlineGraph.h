@@ -86,7 +86,7 @@ struct DisjointSet {
 
 class airlineGraph {
 private:
-    std::unordered_map<std::string, std::vector<Flight>> adjList;
+    std::unordered_map<std::string, std::vector<Flight> > adjList;
     std::unordered_map<std::string, std::string> airportToState;
     std::vector<mstEdge> undirectedEdges;
     
@@ -110,7 +110,7 @@ public:
     std::pair<std::vector<mstEdge>, int> kruskalMST();
     
     const std::unordered_map<std::string, std::string>& getAirportToState() const { return airportToState; }
-    const std::unordered_map<std::string, std::vector<Flight>>& getAdjList() const { return adjList; }
+    const std::unordered_map<std::string, std::vector<Flight> >& getAdjList() const { return adjList; }
 };
 
 #endif // AIRLINEGRAPH_H
