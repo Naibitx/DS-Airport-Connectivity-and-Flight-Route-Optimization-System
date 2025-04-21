@@ -1,4 +1,6 @@
 #include "airlineGraph.h"
+#include "../include/FlightEdge.h"
+#include"../include/Airport.h"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -51,7 +53,7 @@ void airlineGraph::addAirportNode(const std::string& air_code, const std::string
 
 bool airlineGraph::airportExists(const std::string& air_code) const {
     return std::any_of(nodes.begin(), nodes.end(), [&](const GraphNode& node) {
-        return node.airport_code == air_code;
+        return node.air_code == air_code;
     });
 }
 

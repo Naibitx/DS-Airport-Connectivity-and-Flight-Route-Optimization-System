@@ -48,7 +48,16 @@ struct Connections {
         return in + out;
     }
 };
+struct GraphNode {
+    std::string air_code;
+    std::string state_code;
+    std::vector<Flight> edges;  // connections to other airports
 
+    GraphNode() {}
+    
+    GraphNode(const std::string& air, const std::string& state)
+        : air_code(air), state_code(state) {}
+};
 // Disjoint set for MST
 struct DisjointSet {
     std::vector<int> parent;
