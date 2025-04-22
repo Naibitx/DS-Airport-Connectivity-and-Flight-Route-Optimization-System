@@ -1,20 +1,16 @@
 #ifndef AIRPORT_H
 #define AIRPORT_H
 
-template <typename T>
-class Airport {
-public:
-    Airport(const T& c = T(), const T& s = T()) : code(c), state(s), visited(false) {}
+#include <vector>
+#include <string>
 
-    const T& getData() const { return code; }
-    const T& getState() const { return state; }
-    bool getVisited() const { return visited; }
-    void setVisited(bool v) { visited = v; }
+class Airport{
+    public:
+    std::string air_code; // variable for airport code
+    std::string state_code;// variable for state code
 
-private:
-    T code;
-    T state;
-    bool visited;
+    Airport(const std::string& air_code, const std::string& state_code);
+    bool operator ==(const Airport& other) const;  
 };
 
-#endif // AIRPORT_H
+#endif
