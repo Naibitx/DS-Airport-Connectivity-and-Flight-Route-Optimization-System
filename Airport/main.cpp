@@ -111,7 +111,7 @@ int main() {
     
     // Read CSV file once at startup
     cout << "Loading airports.csv..." << endl;
-    graph.readCSV("airports.csv");
+    graph.readCSV("airports.txt");
     
     while (true) {
         displayMenu();
